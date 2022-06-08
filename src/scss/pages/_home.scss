@@ -1,0 +1,39 @@
+// Home Page
+.home-page {
+    overflow: hidden;
+    // style hero sec
+    .main-hero {
+        min-height: 100vh;
+
+        .content {
+            padding-top: 3rem;
+            img {
+                width: 140px;
+            }
+            .works-link {
+                color: white;
+            }
+            @media screen and (min-width: 500px) {
+                img {
+                    width: 220px;
+                }
+            }
+        }
+    }
+}
+
+
+.works-link {
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 2px solid currentColor;
+    line-height: 2rem;
+    @include ease;
+    @media screen and (min-width: 500px) {
+        font-size: 1.8rem;
+    }
+    &:hover {
+        text-decoration: none;
+        opacity: 0.75;
+    }
+}

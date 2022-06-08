@@ -1,0 +1,80 @@
+// Pages
+@import "./home";
+@import "./works";
+@import "./services";
+@import "./success-partners";
+@import "./contact-us";
+
+.main-hero {
+    position: relative;
+    @include imageBackground("../../../public/assets/images/main-img.png");
+    @include overlay(#2d2a26c9);
+
+    .content {
+        color: white;
+        .text {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+
+        .content{
+            padding-top: 3rem;
+            .text{
+                margin-top: 1.5rem;
+            }
+        }
+        @media screen and(min-width: 500px) {
+            .text {
+                font-size: 2rem;
+                line-height: 55px;
+            }
+            .content{
+                width: 75%;
+                padding-top: 7rem;
+                padding-inline-end: 2rem;
+                .text{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+
+    .social-links {
+        display: none;
+        a {
+            svg {
+                @include ease;
+                &:hover {
+                    transform: translateX(10px) scale(1.1);
+                    fill: white;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+}
+
+.works-page,
+.services-page,
+.success_partners-page,
+.contact_us-page{
+    overflow: hidden;
+    .main-hero {
+        height: 70vh;
+    }
+    
+    .main-content{
+        background: #FBFBFB;
+    }
+    @media screen and (max-width: 500px) {
+        .main-content{
+            border-radius: 20px;
+            margin-top: -1rem;
+            position: relative;
+        }
+        
+    }
+}

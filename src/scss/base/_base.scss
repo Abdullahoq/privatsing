@@ -1,0 +1,80 @@
+// Base -reset
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-weight: normal;
+    font-family: $dubai, $san-serif !important;
+    text-align: right;
+}
+
+h1, h2, h3{
+  font-family: $dubaiBold, $san-serif !important;
+}
+h1{
+  font-weight: 700 !important;
+}
+h2,h3, h4,h5{
+  font-weight: 600 !important;
+}
+
+*{
+  scrollbar-color: $primary-color #707070;
+  scrollbar-width: thin;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+input,
+textarea,
+select {
+    border: none;
+    outline: none;
+    overflow: auto;
+}
+
+   /* style scrollbar */
+   ::-webkit-scrollbar {
+    width: .5em;
+    height: .5em;
+    scroll-margin: 1em .5em 1em 1em;
+    margin: 0 1rem ;
+  }
+  
+    /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 34px;
+    background: linear-gradient(to bottom, $primary-color, lighten($primary-color, 10)); 
+    background-clip: padding-box;
+  }
+
+
+

@@ -1,0 +1,140 @@
+.services-page {
+    .main-content {
+        .what-offer {
+            .content {
+                .subtitle {
+                    color: #cbc3bb;
+                }
+                .title {
+                    color: $primary-color;
+                }
+                .text {
+                    color: #979797;
+                }
+                .works-link {
+                    color: $primary-color;
+                }
+            }
+            @media screen and (min-width: 500px) {
+                .content {
+                    width: 80%;
+                    .title {
+                        color: $primary-color;
+                    }
+                    .text {
+                        color: #979797;
+                        font-size: 1.25rem;
+                    }
+                    .works-link {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .swiper {
+            padding: 3rem 0.2rem 5rem;
+
+            .swiper-button-next, .swiper-button-prev {
+                bottom: 0;
+                top: auto;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                background-position: center;
+                width: 30px;
+                @include ease;
+                &::after{
+                    display: none;
+                }
+            }
+            .swiper-button-prev {
+                background-image: url("../../../public/assets/images/next.svg");
+                right: calc(50% - 40px);
+                &:hover{
+                    transform: translateX(10px) scale(1.2);
+                }
+              }
+              .swiper-button-next {
+                background-image: url("../../../public/assets/images/prev.svg");
+                left: calc(50% - 40px);
+                &:hover{
+                    transform: translateX(-10px) scale(1.2);
+                }
+              }
+        }
+        // service-card
+        .service-card {
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.1);
+            border-radius: 14px;
+            min-height: 290px;
+            @include ease;
+            position: relative;
+            overflow: hidden;
+           
+            &:after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                background-color: $primary-color;
+                transform: scaleY(0);
+                transform-origin: bottom right;
+                @include ease;
+                z-index: -1;
+            }
+            .title {
+                color: $primary-color;
+                @include ease;
+            }
+            .text {
+                color: #0b102dc4;
+                @include ease;
+            }
+            .icon {
+                width: 90px;
+                height: 80px;
+                border-radius: 8px;
+                background-color: $primary-color;
+                @include ease;
+                img {
+                    width: 42px;
+                    @include ease;
+                }
+            }
+
+            &:hover {
+                box-shadow: 1px 1px 2px $primary-color;
+                transform: translateY(-10px);
+                &:after {
+                    transform: scaleY(1);
+                }
+                .title {
+                    color: white;
+                }
+                .text {
+                    color: #f1f1f1;
+                }
+                .icon {
+                    img {
+                        transform: rotate(-14deg) scale(1.2);
+                    }
+                }
+            }
+            @media screen and (max-width: 767px) {
+                transform: scaleY(0);
+                transform-origin: bottom;
+                &.show{
+                    transform: scaleY(1);
+                }
+                width: 230px;
+                margin: auto;
+            }
+            @media screen and (min-width: 500px) {
+                .title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

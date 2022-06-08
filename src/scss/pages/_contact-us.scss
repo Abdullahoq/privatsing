@@ -1,0 +1,94 @@
+.contact_us-page {
+    form {
+        .input-container {
+            position: relative;
+
+            input,
+            textarea {
+                font-weight: 500;
+                font-size: 1.1rem;
+                border-radius: 4px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+                outline: none;
+                background-color: white;
+                @include ease;
+            }
+            input {
+                height: 66px;
+            }
+            textarea {
+                resize: none;
+            }
+            span.placeholder {
+                position: absolute;
+                margin: 17px 0;
+                padding: 0 0;
+                color: #8d939a;
+                display: flex;
+                align-items: center;
+                font-size: 1.1rem;
+                top: 0.2rem;
+                @include ease;
+                pointer-events: none;
+                left: auto;
+                right: 0.6rem;
+            }
+
+            input:focus + span.placeholder,
+            input:valid + span.placeholder,
+            textarea:focus + span.placeholder,
+            textarea:valid + span.placeholder,
+            input.filled + span.placeholder {
+                transform: scale(0.9) translateY(-50px);
+                background: transparent;
+            }
+            input:focus + span.placeholder,
+            textarea:focus + span.placeholder {
+                color: $primary-color;
+            }
+            input:focus,
+            textarea:focus {
+                border: 1px solid $primary-color;
+            }
+            input:focus,
+            input:valid,
+            input:invalid {
+                // border: 1px solid red;
+            }
+            input:invalid.filled + span.placeholder {
+                color: red;
+            }
+
+            input:invalid.filled {
+                border: 1px solid red !important;
+            }
+
+            textarea {
+                height: 180px;
+            }
+            textarea:focus,
+            textarea:valid {
+                padding-top: 2rem;
+            }
+            input:focus:invalid + span.placeholder,
+            input:invalid + span.placeholder {
+                // color: red !important;
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            width: 85%;
+        }
+    }
+    .map {
+        iframe {
+            box-shadow: 10px 10px 25px rgba(210, 210, 210, 0.41), -10px -10px 25px rgba(255, 255, 255, 0.4);
+            border-radius: 25px;
+            @include ease;
+            &:hover {
+                transform: scale(0.99);
+                box-shadow: 1px 1px 2px rgba(210, 210, 210, 0.7), -1px -1px 2px rgba(255, 255, 255, 0.65);
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.main-btn {
+    background-color: transparent;
+    height: 52px;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    z-index: 8;
+    @include ease;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: $dubaiBold, $san-serif !important;
+
+    &[disabled] {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+    @media screen and (min-width: 500px) {
+        font-size: 1.6rem;
+    }
+
+    &:hover {
+        text-decoration: none;
+        transform: translateY(-5px);
+    }
+    &.primary-btn {
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25);
+
+        &:hover {
+            color: white;
+            background-color: $primary-color;
+            box-shadow: 1px 1px 2px $primary-color;
+        }
+    }
+
+    &.secondary-btn {
+        border: 2px solid white;
+        color: white;
+
+        &:hover {
+            color: $primary-color;
+            background-color: white;
+        }
+    }
+}

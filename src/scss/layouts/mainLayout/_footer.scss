@@ -1,0 +1,27 @@
+footer {
+    color: $primary-color;
+    overflow: hidden;
+
+    .text{
+        @media screen and (min-width: 500px) {
+            font-size: 1.5rem;
+        }
+    }
+    .social-links {
+        bottom: 1rem;
+        li{
+            margin-inline-start: 1.5rem;
+
+        }
+     
+        a {
+            svg {
+                @include ease;
+                &:hover {
+                    transform: translateY(-10px) scale(1.1);
+                    fill: lighten($primary-color, 20);
+                }
+            }
+        }
+    }
+}

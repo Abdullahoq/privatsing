@@ -1,0 +1,82 @@
+.works-page {
+
+    .main-content {
+        .nav-link {
+            color: lighten($primary-color, 50%);
+            font-weight: 700;
+            @include ease;
+            // margin-inline-end: 0.5rem;
+            padding: 0.4rem .5rem;
+
+            &.active {
+                color: white;
+                background-color: $primary-color;
+            }
+        }
+
+        .grid {
+            column-count: 3;
+            column-gap: 0.6em;
+            img,
+            .text {
+                border-radius: 10px;
+                margin: 0.45rem 0;
+                box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25);
+                @include ease;
+                &:hover {
+                    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+                    transform: scale(0.97);
+                }
+            }
+            .text {
+                background-color: $primary-color;
+                color: white;
+                width: 360px;
+                max-width: 100%;
+                height: 450px;
+            }
+
+            @media screen and (max-width: 1000px) {
+                .text {
+                    font-size: 1.5rem;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+           
+            @media screen and (max-width: 767px) {
+                column-count: 1;
+                .text {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            .nav-link {
+                font-size: 1.3rem;
+            padding: 0.5rem 1rem;
+            }
+        }
+    }
+
+    .swiper{
+        width: 100%;
+    }
+
+}
+a.contact{
+    font-size: 2rem;
+    font-weight: bold;
+    color: $primary-color;
+    .icon{
+       @include ease;
+    }
+    &:hover{
+        text-decoration: none;
+        .icon{
+            transform: translateX(-10px) scale(1.2);
+        }
+    }
+}

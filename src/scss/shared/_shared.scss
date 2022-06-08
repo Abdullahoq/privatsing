@@ -1,0 +1,36 @@
+// style main-title
+.main-title {
+    position: relative;
+    width: max-content;
+    font-size: 1.5rem;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 55px;
+        height: 1px;
+        inset: auto 0 -.5rem;
+        z-index: 9;
+        background-color: white;
+    }
+
+    @media screen and (min-width: 500px) {
+        font-size: 2.2rem;
+        &::after {
+            inset: auto 0 -1rem;
+            width: 71px;
+        }
+    }
+}
+
+/* style phone-number */
+a.phone-number {
+    direction: ltr;
+}
+
+.close {
+    @include ease;
+    &:hover {
+        color: $primary-color;
+        cursor: pointer;
+    }
+}

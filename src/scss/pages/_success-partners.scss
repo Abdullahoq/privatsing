@@ -1,0 +1,12 @@
+.success_partners-page{
+
+    .success_partners-content{
+        img{
+            @include ease;
+            object-fit: contain;
+            &:hover{
+                transform: scale(1.2) rotate(-10deg);
+            }
+        }
+    }
+}
